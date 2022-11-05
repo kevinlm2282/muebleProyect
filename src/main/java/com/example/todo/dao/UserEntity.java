@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 
 import com.example.todo.jwt.Role;
 
-@Table(name = "users")
+@Table(name = "usuario")
 @Entity
  public class UserEntity {
 
@@ -31,8 +31,8 @@ import com.example.todo.jwt.Role;
  private boolean enabled;
  @ManyToMany(fetch=FetchType.LAZY)
  @JoinTable(
- name="users_roles",
- joinColumns= {@JoinColumn(name="usuario_user")},
+ name="usuario_has_rol",
+ joinColumns= {@JoinColumn(name="usuario_user_id")},
  inverseJoinColumns = {@JoinColumn(name="rol_rol_id")}
  )
  private List<Role> roles;

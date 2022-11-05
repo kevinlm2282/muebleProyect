@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class EntregaEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer entrega_id ;
     @Column
@@ -51,6 +51,11 @@ public class EntregaEntity {
         this.usuario_user_id = usuario_user_id;
         this.muebles = muebles;
     }
+
+    public EntregaEntity() {
+
+    }
+
     public Integer getEntrega_id() {
         return entrega_id;
     }
@@ -94,6 +99,17 @@ public class EntregaEntity {
         this.muebles = muebles;
     }
 
-
+    @Override
+    public String toString() {
+        return "EntregaEntity{" +
+                "entrega_id=" + entrega_id +
+                ", fecha=" + fecha +
+                ", total=" + total +
+                ", propietario='" + propietario + '\'' +
+                ", fecha_entrega=" + fecha_entrega +
+                ", usuario_user_id=" + usuario_user_id +
+                ", muebles=" + muebles +
+                '}';
+    }
 }
 

@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 public class MuebleEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer mueble_id;
     @Column

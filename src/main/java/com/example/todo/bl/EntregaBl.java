@@ -41,7 +41,7 @@ public class EntregaBl {
         LOGGER.info("BUSINESS-LOGIC: Iniciando consulta para registrar una entrega");
         EntregaEntity entregaEntity = new EntregaEntity(entregaDto.getFecha(), entregaDto.getTotal(), entregaDto.getPropietario(),
         entregaDto.getFecha_entrega(),entregaDto.getUsuario_user_id(), entregaDto.getMuebles());
-        EntregaEntity entrega = this.entregaRepository.saveAndFlush(entregaEntity);
+        EntregaEntity entrega = this.entregaRepository.save(entregaEntity);
         LOGGER.info("BUSINESS-LOGIC: La consulta para registrar una entrega retorno: {}", entrega);
         return entrega;
     }

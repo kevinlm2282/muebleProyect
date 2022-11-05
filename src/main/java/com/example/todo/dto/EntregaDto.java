@@ -80,5 +80,17 @@ public class EntregaDto {
     public void setMuebles(List<MuebleEntity> muebles) {
         this.muebles = muebles;
     }
-    
+
+    @Override
+    public String toString() {
+        return "EntregaDto{" +
+                "entrega_id=" + entrega_id +
+                ", fecha=" + fecha +
+                ", total=" + total +
+                ", propietario='" + propietario + '\'' +
+                ", fecha_entrega=" + fecha_entrega +
+                ", usuario_user_id=" + usuario_user_id +
+                ", muebles=" + muebles +
+                '}';
+    }
 }

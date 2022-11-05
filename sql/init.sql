@@ -7,14 +7,14 @@ CREATE DATABASE empresa;
 USE empresa;
 
 CREATE TABLE categoria (
-    categoria_id int NOT NULL,
+    categoria_id int NOT NULL AUTO_INCREMENT,
     categoria varchar(50) NOT NULL,
     CONSTRAINT categoria_pk PRIMARY KEY (categoria_id)
 );
 
 -- Table: entrega
 CREATE TABLE entrega (
-    entrega_id int NOT NULL,
+    entrega_id int NOT NULL AUTO_INCREMENT,
     fecha date NOT NULL,
     total double(8,2) NOT NULL,
     propietario varchar(50) NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE entrega (
 
 -- Table: mueble
 CREATE TABLE mueble (
-    mueble_id int NOT NULL,
+    mueble_id int NOT NULL AUTO_INCREMENT,
     nombre varchar(50) NOT NULL,
     color varchar(50) NOT NULL,
     cantidad int NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE rol (
 
 -- Table: usuario
 CREATE TABLE usuario (
-    user_id int NOT NULL,
+    user_id int NOT NULL AUTO_INCREMENT,
     nombre varchar(50) NOT NULL,
     telefono int NOT NULL,
     direccion varchar(50) NOT NULL,
